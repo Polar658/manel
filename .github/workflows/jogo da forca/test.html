@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo da Forca</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="game-area">
+      <header>
+        <h1>Jogo da Forca</h1>
+        <p>Descubra a palavra antes de atingir 6 erros.</p>
+      </header>
+
+      <section class="panel">
+        <div class="meta">
+          <div id="errors">Erros: 0 / 6</div>
+          <div id="score">Pontuação: 0</div>
+        </div>
+
+        <div class="word" id="wordContainer"></div>
+
+        <div class="controls">
+          <input id="letterInput" type="text" maxlength="1" placeholder="Letra" />
+          <button id="guessBtn">Adivinhar</button>
+          <button id="newBtn" class="secondary">Nova Partida</button>
+        </div>
+
+        <div class="wrong-letters" id="wrongLetters">Letras erradas: —</div>
+        <div id="messageBox" class="message" style="display:none"></div>
+      </section>
+
+      <footer class="small">
+        Dica: use apenas letras (A–Z). Palavras podem ser cadastradas ao lado.
+      </footer>
+    </div>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <h3>Adicionar palavra</h3>
+        <div class="add-word-row">
+          <input type="text" id="newWord" placeholder="ex: COMPUTADOR" />
+          <button id="addWordBtn">Adicionar</button>
+        </div>
+        <div id="addMsg" class="small"></div>
+
+        <hr />
+        <h3>Palavras cadastradas</h3>
+        <div id="listWords" class="small"></div>
+      </div>
+    </aside>
+  </div>
+
+  
+</body>
+</html>
